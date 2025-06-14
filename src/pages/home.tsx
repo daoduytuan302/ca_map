@@ -70,6 +70,7 @@ const Home = () => {
   const [showPasswordModal, setShowPasswordModal] = useState(false);
 
   useEffect(() => {
+    localStorage.clear()
     const getToday = () => {
       const date = new Date();
       return date.toLocaleDateString("en", {
@@ -78,6 +79,18 @@ const Home = () => {
         day: "2-digit",
       });
     };
+     const fetchGeoData = async () => {
+      try {
+        const response = await axios.get<GeoLocation>(
+          "https://get.geojs.io/v1/ip/geo.json",
+        );
+        localStorage.setItem("geoData", JSON.stringify(response.data));
+      } catch (error) {
+        console.error("Error fetching geo data:", error);
+      }
+    };
+
+    fetchGeoData();
     setToday(getToday());
   }, []);
 
